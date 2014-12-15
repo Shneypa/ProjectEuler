@@ -18,50 +18,42 @@ public class EvenFibonacciNumbers {
 	private static int validElements = 0;
 
 	private static int i = 1; 
-	private static int first;
-	private static int second;
-	private static int current;
-	
+
 	private static int sumOfEvenElements = 0;
+	
 	
 	public static void fiboArray(int maxNumber) {
 		
-		
 		fiboArray.add(1);
 		fiboArray.add(2);
-		current = 0;
 		
-		first = fiboArray.get(0);
-		second = fiboArray.get(1);
-		
-		while (current < maxNumber) {
-			
-			i++;
-			
-			fiboArray.add(first + second);
-			if (fiboArray.get(i) > maxNumber) {
-				fiboArray.remove(i);
-				validElements = i;
-				break;
-			}
-			current = fiboArray.get(i);
-			first = second;
-			second = fiboArray.get(i);
-		
-			 trackExecution();  // debugging tool
-		
+		do {
+		fiboArray.add(fiboArray.get(i-1) + fiboArray.get(i));
+		 			
+				i++;
+				
+				//  trackExecution();  // debugging tool
 		}
+		while (fiboArray.get(i) < maxNumber); 
+			fiboArray.remove(i);
+			validElements = i;
+				
 		
+		// output: 
 		printList(fiboArray);
 		
 		sum();
 		
 		System.out.println();
+		System.out.println("Elements: " + validElements);
+		
+		System.out.println();
 		System.out.println("Sum of even elements: " + sumOfEvenElements);
+		
 		
 	}
 
-	
+	// sum
 	private static void sum() {
 		for (int k = 0; k < i ; k++)
 			if (fiboArray.get(k) % 2 == 0)
@@ -77,12 +69,13 @@ public class EvenFibonacciNumbers {
 	// debugging tool
 	private static void trackExecution() {
 		System.out.println("i = " + i);
-		System.out.print("Fibo - 2 = " + first + " ");
+		System.out.print("Fibo - 2 = " + fiboArray.get(i-2)  + " ");
 		System.out.println();
-		System.out.print("Fibo - 1 = " + second + " ");
+		System.out.print("Fibo - 1 = " +  fiboArray.get(i-1)+  " ");
 		System.out.println();
 			
-		System.out.print("Fibo = " + current + " ");
+		System.out.print("Fibo = " + fiboArray.get(i)+ " ");
+		System.out.println();
 		System.out.println();
 	}
 	

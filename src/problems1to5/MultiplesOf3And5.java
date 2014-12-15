@@ -134,7 +134,6 @@ public class MultiplesOf3And5 {
 				}
 			}
 			
-			// trim the empty elements
 			resultArray = new int[numberOfGoodElementsMulti];
 			for (int i = 0; i < numberOfGoodElementsMulti; i++) {
 				resultArray[i] = goodElementsMulti[i];
@@ -222,16 +221,20 @@ public class MultiplesOf3And5 {
 			
 			initArray(n);
 			
-			// printArray(allElements);
-			
 			chooseElements(a,b);
 			
+			// trimming array
+			int[] resultingArray = new int[numberOfGoodElements];
+			for (int k = 0 ; k < numberOfGoodElements; k++) {
+				resultingArray[k] = goodElements[k];
+			}
 			
+			// print
 			System.out.println();
-			printArray(goodElements);
+			printArray(resultingArray);
 			
 			
-			sumOfElements =  sumOfArrayElements(goodElements);
+			sumOfElements =  sumOfArrayElements(resultingArray);
 			
 			System.out.println();
 			System.out.println("Number of elements: "+ numberOfGoodElements);
