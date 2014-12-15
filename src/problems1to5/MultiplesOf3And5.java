@@ -48,6 +48,9 @@ public class MultiplesOf3And5 {
 	// We would get a progression of 3, 5, 6, 7, 9, 10, 12, 14, 15 etc...
 	
 	public static void severalFactors() {
+		System.out.println("EXERCISE 1: Multiples of 3 and 5 (or any amount of factors actually) ");
+		System.out.println();
+		
 		int sumOfElements = 0;
 		int n;
 		

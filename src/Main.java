@@ -15,7 +15,7 @@ public class Main {
 		System.out.println();
 		
 		// Extended version: User inputs any amount of factors
-		// MultiplesOf3And5.severalFactors();
+		 MultiplesOf3And5.severalFactors();
 		
 		// TODO 1. Apply a sorting algorithm to the resulting array 
 			

@@ -23,6 +23,10 @@ public class EvenFibonacciNumbers {
 	
 	
 	public static void fiboArray(int maxNumber) {
+		System.out.println("EXERCISE 2: Even Fibonacci numbers");
+		System.out.println();
+		System.out.println("Fibonacci numbers that do not exceed " + maxNumber + " : ");
+		System.out.println();
 		
 		fiboArray.add(1);
 		fiboArray.add(2);
@@ -35,6 +39,7 @@ public class EvenFibonacciNumbers {
 				//  trackExecution();  // debugging tool
 		}
 		while (fiboArray.get(i) < maxNumber); 
+			
 			fiboArray.remove(i);
 			validElements = i;
 				
@@ -53,6 +58,7 @@ public class EvenFibonacciNumbers {
 		
 	}
 
+	
 	// sum
 	private static void sum() {
 		for (int k = 0; k < i ; k++)
