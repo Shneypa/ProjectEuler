@@ -21,7 +21,7 @@ public class Main {
 			
 		
 		// 2. Even Fibonacci Numbers
-		EvenFibonacciNumbers.fiboArray(4000000);
+		EvenFibonacciNumbers.fiboArray(400);
 		
 		// TODO 2. How to keep arrays properly sized? 
 	}
