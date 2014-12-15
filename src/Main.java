@@ -18,7 +18,8 @@ public class Main {
 		
 		// TODO 1. Apply a sorting algorithm to the resulting array 
 			
-			
+		// Testing changes for GIT	
+		System.out.println("Testing GIT");
 	}
 
 }
