@@ -21,6 +21,31 @@ public class EvenFibonacciNumbers {
 
 	private static int sumOfEvenElements = 0;
 	
+	public static int fiboArrayCompact(int maxNumber) {
+		int a = 1;
+		int b = 2;
+		int c = 0;
+		int sum = 2;
+		
+		System.out.print("Progression : ");
+		while (c < maxNumber) {
+			c = a + b;
+			a = b;
+			b = c;
+			System.out.print(c + " ");
+			if (c % 2 == 0) {
+				sum += c;
+				
+			}
+		}
+		
+		System.out.println();
+		System.out.println("Compact function: ");
+		System.out.println("Sum of even fibonacci numbers below " + maxNumber + " is " + sum);
+		System.out.println("Next element is " + c + " and exceeds maxNumber");
+		return sum;
+		
+	}
 	
 	public static void fiboArray(int maxNumber) {
 		System.out.println("EXERCISE 2: Even Fibonacci numbers");

@@ -48,7 +48,7 @@ public class MultiplesOf3And5 {
 	// We would get a progression of 3, 5, 6, 7, 9, 10, 12, 14, 15 etc...
 	
 	public static void severalFactors() {
-		System.out.println("EXERCISE 1: Multiples of 3 and 5 (or any amount of factors actually) ");
+		System.out.println("EXERCISE 1: Multiples of 3 and 5 (or ANY AMOUNT of factors) ");
 		System.out.println();
 		
 		int sumOfElements = 0;
@@ -92,6 +92,7 @@ public class MultiplesOf3And5 {
 		
 		System.out.println();
 		printArray(resultArray);	// now array needs SORTING ! 
+									// FIXME Duplicated elements have to be deleted ! 
 		
 		sumOfElements = sumOfArrayElements(resultArray);
 		
@@ -178,10 +179,10 @@ public class MultiplesOf3And5 {
 		// initialize array
 		private static void initArray(int n) {
 			
-			allElements = new int[n];
-			goodElements = new int[n];
+			allElements = new int[n - 1];
+			goodElements = new int[n - 1];
 					
-			for (int i = 0; i < n; i++) {
+			for (int i = 0; i < n - 1 ; i++) {
 				
 				allElements[i] = i + 1;
 			}
@@ -219,6 +220,9 @@ public class MultiplesOf3And5 {
 
 		
 		public static int multiplesOfEitherOfTwoFactors(int a, int b, int n) {
+			System.out.println("EXERCISE 1: Multiples of 3 and 5 (or any two factors) ");
+			System.out.println();
+			
 			int sumOfElements = 0;
 			
 			
